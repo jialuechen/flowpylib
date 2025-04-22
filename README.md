@@ -1,10 +1,6 @@
 <div align=center>
-<img src="assets/pyflow-logo.png" width="40%" loc>
-</div>
 
-<div align=center>
-
-# PyTCA: Python Library for Transaction Cost Analysis (TCA)
+# PyFlow: Python Library for Trading Cost and Liquidity Analytics
 
 </div>
 
@@ -19,7 +15,7 @@
 
 </div>
 
-**PyTCA** is a Python package for transaction cost analysis in financial markets, supporting both stock and forex data at the tick level.
+**PyFlow** is a Python package for transaction cost analysis in financial markets, supporting both stock and forex data at the tick level.
 
 ## Features
 
