@@ -1,5 +1,5 @@
 import pytest
-from pytca.visualization.plotter import plot_candlestick
+from pyflow.visualization.plotter import plot_candlestick
 import pandas as pd
 
 def test_plot_candlestick():

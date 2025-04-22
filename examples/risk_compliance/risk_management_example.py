@@ -1,5 +1,5 @@
 import numpy as np
-from pytca.risk.compliance import calculate_var, compliance_check
+from pyflow.risk.compliance import calculate_var, compliance_check
 import pandas as pd
 
 # Example data: Returns of a portfolio over a period

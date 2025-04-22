@@ -1,5 +1,5 @@
 from flask import Flask, request, jsonify
-from pytca.analysis.general.metrics import calculate_vwap
+from pyflow.analysis.general.metrics import calculate_vwap
 
 app = Flask(__name__)
 

@@ -1,6 +1,6 @@
 import pytest
 import numpy as np
-from pytca.portfolio.optimization import calculate_portfolio_variance, optimize_portfolio
+from pyflow.portfolio.optimization import calculate_portfolio_variance, optimize_portfolio
 
 def test_calculate_portfolio_variance():
     weights = np.array([0.4, 0.3, 0.3])

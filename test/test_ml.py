@@ -1,5 +1,5 @@
 import pytest
-from pytca.ml.models import train_forecast_model
+from pyflow.ml.models import train_forecast_model
 import pandas as pd
 
 def test_train_forecast_model():

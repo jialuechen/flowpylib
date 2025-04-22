@@ -1,4 +1,4 @@
-from pytca.analysis.general.impact import calculate_slippage, calculate_market_impact
+from pyflow.analysis.general.impact import calculate_slippage, calculate_market_impact
 
 # Example data for market impact analysis
 initial_price = 100.0  # Initial price of the asset

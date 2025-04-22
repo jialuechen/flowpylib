@@ -1,5 +1,5 @@
 <div align=center>
-<img src="assets/pytca-logo.png" width="40%" loc>
+<img src="assets/pyflow-logo.png" width="40%" loc>
 </div>
 
 <div align=center>
@@ -10,12 +10,12 @@
 
 <div align=center>
 
-[![PyPI - Version](https://img.shields.io/pypi/v/pytca)](https://pypi.org/project/pytca/)
-[![Python Versions](https://img.shields.io/badge/python-3.6%2B-green)](https://pypi.org/project/pytca/)
-![PyPI downloads](https://img.shields.io/pypi/dm/pytca)
-[![Documentation Status](https://readthedocs.org/projects/pytca/badge/?version=latest)](https://pytca.readthedocs.io/en/latest/?badge=latest)
+[![PyPI - Version](https://img.shields.io/pypi/v/pyflow)](https://pypi.org/project/pyflow/)
+[![Python Versions](https://img.shields.io/badge/python-3.6%2B-green)](https://pypi.org/project/pyflow/)
+![PyPI downloads](https://img.shields.io/pypi/dm/pyflow)
+[![Documentation Status](https://readthedocs.org/projects/pyflow/badge/?version=latest)](https://pyflow.readthedocs.io/en/latest/?badge=latest)
 [![License](https://img.shields.io/badge/License-BSD%202--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)
-[![Coverage Status](https://coveralls.io/repos/github/jialuechen/pytca/badge.svg?branch=main)](https://coveralls.io/github/jialuechen/pytca?branch=main)
+[![Coverage Status](https://coveralls.io/repos/github/jialuechen/pyflow/badge.svg?branch=main)](https://coveralls.io/github/jialuechen/pyflow?branch=main)
 
 </div>
 
@@ -32,23 +32,23 @@
 ## Installation
 
 ```bash
-pip install -U pytca
+pip install -U pyflow
 ```
 
 ## Quick Start
 
 ```python
-import pytca
+import pyflow
 
 # Load tick data
-tick_data = pytca.load_tick_data('path/to/tick_data.csv', data_type='stock')
+tick_data = pyflow.load_tick_data('path/to/tick_data.csv', data_type='stock')
 
 # Analyze tick data
-analysis_results = pytca.analyze_tick_data(tick_data)
+analysis_results = pyflow.analyze_tick_data(tick_data)
 print("Tick Data Analysis Results:", analysis_results)
 
 # Visualize tick data
-fig = pytca.plot_tick_data(tick_data, plot_type='summary')
+fig = pyflow.plot_tick_data(tick_data, plot_type='summary')
 fig.write_html('tick_data_summary.html')
 ```
 
@@ -57,81 +57,81 @@ fig.write_html('tick_data_summary.html')
 ### Loading Data from Different Sources
 
 ```python
-import pytca
+import pyflow
 
 # Load data from CSV
-csv_data = pytca.load_tick_data('path/to/tick_data.csv', data_type='stock')
+csv_data = pyflow.load_tick_data('path/to/tick_data.csv', data_type='stock')
 
 # Load data from Excel
-excel_data = pytca.read_excel('path/to/tick_data.xlsx', sheet_name='Tick Data')
+excel_data = pyflow.read_excel('path/to/tick_data.xlsx', sheet_name='Tick Data')
 
 # Load data from KDB
-kdb_handler = pytca.KDBHandler(host='localhost', port=5000)
+kdb_handler = pyflow.KDBHandler(host='localhost', port=5000)
 kdb_data = kdb_handler.load_tick_data('tickdata', '2023.07.15T09:30:00.000', '2023.07.15T16:00:00.000')
 ```
 
 ### Performing Analysis
 
 ```python
-import pytca
+import pyflow
 
 # Load data
-stock_data = pytca.load_tick_data('path/to/stock_data.csv', data_type='stock')
-forex_data = pytca.load_tick_data('path/to/forex_data.csv', data_type='forex')
+stock_data = pyflow.load_tick_data('path/to/stock_data.csv', data_type='stock')
+forex_data = pyflow.load_tick_data('path/to/forex_data.csv', data_type='forex')
 
 # Analyze stock data
-stock_analysis = pytca.analyze_stock_trade(stock_data, benchmark_data)
+stock_analysis = pyflow.analyze_stock_trade(stock_data, benchmark_data)
 print("Stock Analysis Results:", stock_analysis)
 
 # Analyze forex data
-forex_analysis = pytca.analyze_forex_trade(forex_data, benchmark_data)
+forex_analysis = pyflow.analyze_forex_trade(forex_data, benchmark_data)
 print("Forex Analysis Results:", forex_analysis)
 
 # Calculate slippage
-slippage = pytca.calculate_slippage(executed_price=100.05, benchmark_price=100.00)
+slippage = pyflow.calculate_slippage(executed_price=100.05, benchmark_price=100.00)
 print("Slippage:", slippage)
 
 # Calculate VWAP
-vwap = pytca.calculate_vwap(prices=[100.00, 100.05, 100.10], volumes=[1000, 2000, 1500])
+vwap = pyflow.calculate_vwap(prices=[100.00, 100.05, 100.10], volumes=[1000, 2000, 1500])
 print("VWAP:", vwap)
 ```
 
 ### Generating Visualizations
 
 ```python
-import pytca
+import pyflow
 
 # Load data
-tick_data = pytca.load_tick_data('path/to/tick_data.csv', data_type='stock')
+tick_data = pyflow.load_tick_data('path/to/tick_data.csv', data_type='stock')
 
 # Create basic plot
-basic_fig = pytca.plot_tick_data(tick_data, plot_type='basic')
+basic_fig = pyflow.plot_tick_data(tick_data, plot_type='basic')
 basic_fig.savefig('basic_plot.png')
 
 # Create candlestick chart
-candlestick_fig = pytca.plot_tick_data(tick_data, plot_type='candlestick', interval='5min')
+candlestick_fig = pyflow.plot_tick_data(tick_data, plot_type='candlestick', interval='5min')
 candlestick_fig.write_html('candlestick.html')
 
 # Create order book depth chart
-depth_fig = pytca.plot_tick_data(tick_data, plot_type='depth')
+depth_fig = pyflow.plot_tick_data(tick_data, plot_type='depth')
 depth_fig.write_html('depth_chart.html')
 
 # Create trade flow chart
-trade_flow_fig = pytca.plot_tick_data(tick_data, plot_type='trade_flow', window='5min')
+trade_flow_fig = pyflow.plot_tick_data(tick_data, plot_type='trade_flow', window='5min')
 trade_flow_fig.write_html('trade_flow.html')
 
 # Create summary dashboard
-summary_fig = pytca.plot_tick_data(tick_data, plot_type='summary')
+summary_fig = pyflow.plot_tick_data(tick_data, plot_type='summary')
 summary_fig.write_html('summary_dashboard.html')
 ```
 
 ### Using the RESTful API
 
 ```python
-import pytca
+import pyflow
 
 # Start the API server
-pytca.run_api(host='localhost', port=5000)
+pyflow.run_api(host='localhost', port=5000)
 
 # Now you can make HTTP requests to the API endpoints, for example:
 # POST http://localhost:5000/analyze_tick_data

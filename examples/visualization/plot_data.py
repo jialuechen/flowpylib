@@ -1,4 +1,4 @@
-from pytca.visualization.plotter import plot_candlestick
+from pyflow.visualization.plotter import plot_candlestick
 import pandas as pd
 
 # Example data
