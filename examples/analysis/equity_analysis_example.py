@@ -1,4 +1,4 @@
-from pyflow.analysis.equities.equity_metrics import calculate_beta
+from flowpylib.analysis.equities.equity_metrics import calculate_beta
 
 # Example data
 asset_returns = [0.01, 0.02, -0.01, 0.03]

@@ -1,21 +1,21 @@
 <div align=center>
 
-# PyFlow: Python Library for Trading Cost and Liquidity Analytics
+# FlowPylib: Python Library for Trading Cost and Liquidity Analytics
 
 </div>
 
 <div align=center>
 
-[![PyPI - Version](https://img.shields.io/pypi/v/pyflow)](https://pypi.org/project/pyflow/)
-[![Python Versions](https://img.shields.io/badge/python-3.6%2B-green)](https://pypi.org/project/pyflow/)
-![PyPI downloads](https://img.shields.io/pypi/dm/pyflow)
-[![Documentation Status](https://readthedocs.org/projects/pyflow/badge/?version=latest)](https://pyflow.readthedocs.io/en/latest/?badge=latest)
+[![PyPI - Version](https://img.shields.io/pypi/v/flowpylib)](https://pypi.org/project/flowpylib/)
+[![Python Versions](https://img.shields.io/badge/python-3.6%2B-green)](https://pypi.org/project/flowpylib/)
+![PyPI downloads](https://img.shields.io/pypi/dm/flowpylib)
+[![Documentation Status](https://readthedocs.org/projects/flowpylib/badge/?version=latest)](https://flowpylib.readthedocs.io/en/latest/?badge=latest)
 [![License](https://img.shields.io/badge/License-BSD%202--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)
-[![Coverage Status](https://coveralls.io/repos/github/jialuechen/pyflow/badge.svg?branch=main)](https://coveralls.io/github/jialuechen/pyflow?branch=main)
+[![Coverage Status](https://coveralls.io/repos/github/jialuechen/flowpylib/badge.svg?branch=main)](https://coveralls.io/github/jialuechen/flowpylib?branch=main)
 
 </div>
 
-**PyFlow** is a Python package for transaction cost analysis in financial markets, supporting both stock and forex data at the tick level.
+**FlowPylib** is a Python package for transaction cost analysis in financial markets, supporting both stock and forex data at the tick level.
 
 ## Features
 
@@ -28,23 +28,23 @@
 ## Installation
 
 ```bash
-pip install -U pyflow
+pip install -U flowpylib
 ```
 
 ## Quick Start
 
 ```python
-import pyflow
+import flowpylib
 
 # Load tick data
-tick_data = pyflow.load_tick_data('path/to/tick_data.csv', data_type='stock')
+tick_data = flowpylib.load_tick_data('path/to/tick_data.csv', data_type='stock')
 
 # Analyze tick data
-analysis_results = pyflow.analyze_tick_data(tick_data)
+analysis_results = flowpylib.analyze_tick_data(tick_data)
 print("Tick Data Analysis Results:", analysis_results)
 
 # Visualize tick data
-fig = pyflow.plot_tick_data(tick_data, plot_type='summary')
+fig = flowpylib.plot_tick_data(tick_data, plot_type='summary')
 fig.write_html('tick_data_summary.html')
 ```
 
@@ -53,81 +53,81 @@ fig.write_html('tick_data_summary.html')
 ### Loading Data from Different Sources
 
 ```python
-import pyflow
+import flowpylib
 
 # Load data from CSV
-csv_data = pyflow.load_tick_data('path/to/tick_data.csv', data_type='stock')
+csv_data = flowpylib.load_tick_data('path/to/tick_data.csv', data_type='stock')
 
 # Load data from Excel
-excel_data = pyflow.read_excel('path/to/tick_data.xlsx', sheet_name='Tick Data')
+excel_data = flowpylib.read_excel('path/to/tick_data.xlsx', sheet_name='Tick Data')
 
 # Load data from KDB
-kdb_handler = pyflow.KDBHandler(host='localhost', port=5000)
+kdb_handler = flowpylib.KDBHandler(host='localhost', port=5000)
 kdb_data = kdb_handler.load_tick_data('tickdata', '2023.07.15T09:30:00.000', '2023.07.15T16:00:00.000')
 ```
 
 ### Performing Analysis
 
 ```python
-import pyflow
+import flowpylib
 
 # Load data
-stock_data = pyflow.load_tick_data('path/to/stock_data.csv', data_type='stock')
-forex_data = pyflow.load_tick_data('path/to/forex_data.csv', data_type='forex')
+stock_data = flowpylib.load_tick_data('path/to/stock_data.csv', data_type='stock')
+forex_data = flowpylib.load_tick_data('path/to/forex_data.csv', data_type='forex')
 
 # Analyze stock data
-stock_analysis = pyflow.analyze_stock_trade(stock_data, benchmark_data)
+stock_analysis = flowpylib.analyze_stock_trade(stock_data, benchmark_data)
 print("Stock Analysis Results:", stock_analysis)
 
 # Analyze forex data
-forex_analysis = pyflow.analyze_forex_trade(forex_data, benchmark_data)
+forex_analysis = flowpylib.analyze_forex_trade(forex_data, benchmark_data)
 print("Forex Analysis Results:", forex_analysis)
 
 # Calculate slippage
-slippage = pyflow.calculate_slippage(executed_price=100.05, benchmark_price=100.00)
+slippage = flowpylib.calculate_slippage(executed_price=100.05, benchmark_price=100.00)
 print("Slippage:", slippage)
 
 # Calculate VWAP
-vwap = pyflow.calculate_vwap(prices=[100.00, 100.05, 100.10], volumes=[1000, 2000, 1500])
+vwap = flowpylib.calculate_vwap(prices=[100.00, 100.05, 100.10], volumes=[1000, 2000, 1500])
 print("VWAP:", vwap)
 ```
 
 ### Generating Visualizations
 
 ```python
-import pyflow
+import flowpylib
 
 # Load data
-tick_data = pyflow.load_tick_data('path/to/tick_data.csv', data_type='stock')
+tick_data = flowpylib.load_tick_data('path/to/tick_data.csv', data_type='stock')
 
 # Create basic plot
-basic_fig = pyflow.plot_tick_data(tick_data, plot_type='basic')
+basic_fig = flowpylib.plot_tick_data(tick_data, plot_type='basic')
 basic_fig.savefig('basic_plot.png')
 
 # Create candlestick chart
-candlestick_fig = pyflow.plot_tick_data(tick_data, plot_type='candlestick', interval='5min')
+candlestick_fig = flowpylib.plot_tick_data(tick_data, plot_type='candlestick', interval='5min')
 candlestick_fig.write_html('candlestick.html')
 
 # Create order book depth chart
-depth_fig = pyflow.plot_tick_data(tick_data, plot_type='depth')
+depth_fig = flowpylib.plot_tick_data(tick_data, plot_type='depth')
 depth_fig.write_html('depth_chart.html')
 
 # Create trade flow chart
-trade_flow_fig = pyflow.plot_tick_data(tick_data, plot_type='trade_flow', window='5min')
+trade_flow_fig = flowpylib.plot_tick_data(tick_data, plot_type='trade_flow', window='5min')
 trade_flow_fig.write_html('trade_flow.html')
 
 # Create summary dashboard
-summary_fig = pyflow.plot_tick_data(tick_data, plot_type='summary')
+summary_fig = flowpylib.plot_tick_data(tick_data, plot_type='summary')
 summary_fig.write_html('summary_dashboard.html')
 ```
 
 ### Using the RESTful API
 
 ```python
-import pyflow
+import flowpylib
 
 # Start the API server
-pyflow.run_api(host='localhost', port=5000)
+flowpylib.run_api(host='localhost', port=5000)
 
 # Now you can make HTTP requests to the API endpoints, for example:
 # POST http://localhost:5000/analyze_tick_data

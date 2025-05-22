@@ -1,5 +1,5 @@
 # examples/load_sql_data.py
-from pyflow import load_data
+from flowpylib import load_data
 
 # Load data from MySQL
 mysql_data = load_data('mysql', host='localhost', user='username', password='password', database='dbname', query='SELECT * FROM trades')

@@ -113,7 +113,7 @@ ipython_config.py
 .pdm-python
 .pdm-build/
 
-# PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
+# PEP 582; used by e.g. github.com/David-OConnor/flowpylib and github.com/pdm-project/pdm
 __pypackages__/
 
 # Celery stuff

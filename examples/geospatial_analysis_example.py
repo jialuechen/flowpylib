@@ -1,6 +1,6 @@
 import geopandas as gpd
 import matplotlib.pyplot as plt
-from pyflow.analysis.geospatial import plot_geospatial_data
+from flowpylib.analysis.geospatial import plot_geospatial_data
 
 # Example data: This would typically be loaded from a file or database.
 # Here, we create a simple GeoDataFrame for demonstration purposes.

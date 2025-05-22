@@ -1,4 +1,4 @@
-from pyflow.crypto.defi_tools import analyze_smart_contract
+from flowpylib.crypto.defi_tools import analyze_smart_contract
 from web3 import Web3
 
 # Setup a Web3 connection

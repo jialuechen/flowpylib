@@ -1,4 +1,4 @@
-from pyflow.analysis.fx.fx_metrics import calculate_fx_spread
+from flowpylib.analysis.fx.fx_metrics import calculate_fx_spread
 
 # Example data
 bid_prices = [1.105, 1.106, 1.107]

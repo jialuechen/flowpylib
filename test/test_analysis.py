@@ -1,5 +1,5 @@
 import pytest
-from pyflow.analysis.general.metrics import calculate_vwap
+from flowpylib.analysis.general.metrics import calculate_vwap
 
 def test_calculate_vwap():
     prices = [100, 101, 102, 103, 104]

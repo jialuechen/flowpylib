@@ -1,4 +1,4 @@
-from pyflow.ml.models import train_forecast_model
+from flowpylib.ml.models import train_forecast_model
 import pandas as pd
 
 # Example data

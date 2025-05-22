@@ -1,4 +1,4 @@
-from pyflow.analysis.sentiment.sentiment_analysis import analyze_sentiment, sentiment_trend_over_time
+from flowpylib.analysis.sentiment.sentiment_analysis import analyze_sentiment, sentiment_trend_over_time
 import pandas as pd
 
 # Example text data for sentiment analysis

@@ -1,5 +1,5 @@
-from pyflow.analysis.general.metrics import calculate_vwap
-from pyflow.analysis.equities.equity_metrics import calculate_beta
+from flowpylib.analysis.general.metrics import calculate_vwap
+from flowpylib.analysis.equities.equity_metrics import calculate_beta
 import numpy as np
 
 # Example data for VWAP calculation

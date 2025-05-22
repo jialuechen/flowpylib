@@ -1,6 +1,6 @@
 import pytest
 import numpy as np
-from pyflow.risk.compliance import calculate_var, compliance_check
+from flowpylib.risk.compliance import calculate_var, compliance_check
 
 def test_calculate_var():
     returns = np.array([-0.02, -0.01, 0.01, 0.02, 0.03, 0.05])

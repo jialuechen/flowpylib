@@ -1,5 +1,5 @@
 # examples/load_data.py
-from pyflow import load_data
+from flowpylib import load_data
 
 # Load data from a CSV file
 csv_data = load_data('csv', file_path='path/to/data.csv')

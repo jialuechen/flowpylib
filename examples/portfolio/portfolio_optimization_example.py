@@ -1,4 +1,4 @@
-from pyflow.portfolio.optimization import optimize_portfolio
+from flowpylib.portfolio.optimization import optimize_portfolio
 
 # Example data
 expected_returns = [0.1, 0.2, 0.15]
