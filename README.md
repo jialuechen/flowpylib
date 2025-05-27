@@ -40,27 +40,24 @@
 - **Multi-Source Data Loading:**  
   Supports CSV, Excel, SQL, KDB+, and other RDBMS data sources.
 
-## Installation
-
+## Installation and Quick Start
 ```bash
 pip install -U flowpylib
 ```
 
-## Quick Start
-
 ```python
 import flowpylib
 
-# Load tick data
+# Load tick data (supports stocks, forex, etc.)
 tick_data = flowpylib.load_tick_data('path/to/tick_data.csv', data_type='stock')
 
-# Analyze tick data
+# Analyze the tick data
 analysis_results = flowpylib.analyze_tick_data(tick_data)
 print("Tick Data Analysis Results:", analysis_results)
 
-# Visualize tick data
-fig = flowpylib.plot_tick_data(tick_data, plot_type='summary')
-fig.write_html('tick_data_summary.html')
+# Visualize tick data with a summary dashboard
+summary_fig = flowpylib.plot_tick_data(tick_data, plot_type='summary')
+summary_fig.write_html('summary_dashboard.html')
 ```
 
 ## More Examples
@@ -70,13 +67,13 @@ fig.write_html('tick_data_summary.html')
 ```python
 import flowpylib
 
-# Load data from CSV
+# From CSV
 csv_data = flowpylib.load_tick_data('path/to/tick_data.csv', data_type='stock')
 
-# Load data from Excel
+# From Excel
 excel_data = flowpylib.read_excel('path/to/tick_data.xlsx', sheet_name='Tick Data')
 
-# Load data from KDB
+# Using KDBHandler for KDB+ source
 kdb_handler = flowpylib.KDBHandler(host='localhost', port=5000)
 kdb_data = kdb_handler.load_tick_data('tickdata', '2023.07.15T09:30:00.000', '2023.07.15T16:00:00.000')
 ```
@@ -86,7 +83,7 @@ kdb_data = kdb_handler.load_tick_data('tickdata', '2023.07.15T09:30:00.000', '20
 ```python
 import flowpylib
 
-# Load data
+# Load data for stocks and forex
 stock_data = flowpylib.load_tick_data('path/to/stock_data.csv', data_type='stock')
 forex_data = flowpylib.load_tick_data('path/to/forex_data.csv', data_type='forex')
 
@@ -98,11 +95,10 @@ print("Stock Analysis Results:", stock_analysis)
 forex_analysis = flowpylib.analyze_forex_trade(forex_data, benchmark_data)
 print("Forex Analysis Results:", forex_analysis)
 
-# Calculate slippage
+# Calculate slippage and VWAP as examples
 slippage = flowpylib.calculate_slippage(executed_price=100.05, benchmark_price=100.00)
 print("Slippage:", slippage)
 
-# Calculate VWAP
 vwap = flowpylib.calculate_vwap(prices=[100.00, 100.05, 100.10], volumes=[1000, 2000, 1500])
 print("VWAP:", vwap)
 ```
@@ -112,26 +108,26 @@ print("VWAP:", vwap)
 ```python
 import flowpylib
 
-# Load data
+# Load tick data
 tick_data = flowpylib.load_tick_data('path/to/tick_data.csv', data_type='stock')
 
-# Create basic plot
+# Create a basic plot
 basic_fig = flowpylib.plot_tick_data(tick_data, plot_type='basic')
 basic_fig.savefig('basic_plot.png')
 
-# Create candlestick chart
+# Create a candlestick chart
 candlestick_fig = flowpylib.plot_tick_data(tick_data, plot_type='candlestick', interval='5min')
 candlestick_fig.write_html('candlestick.html')
 
-# Create order book depth chart
+# Create an order book depth chart
 depth_fig = flowpylib.plot_tick_data(tick_data, plot_type='depth')
 depth_fig.write_html('depth_chart.html')
 
-# Create trade flow chart
+# Create a trade flow chart
 trade_flow_fig = flowpylib.plot_tick_data(tick_data, plot_type='trade_flow', window='5min')
 trade_flow_fig.write_html('trade_flow.html')
 
-# Create summary dashboard
+# Create a summary dashboard
 summary_fig = flowpylib.plot_tick_data(tick_data, plot_type='summary')
 summary_fig.write_html('summary_dashboard.html')
 ```
@@ -150,7 +146,25 @@ flowpylib.run_api(host='localhost', port=5000)
 ```
 
 ## Roadmap
-Q4 2024: Implement an order flow simulator which can generate large-scale alpha-less orders,i.e., unbiased trades from randomized interventional experiments.
+
+- **Q4 2024:**  
+  - Implement an order flow simulator capable of generating large-scale alpha-less orders, i.e., unbiased trades from randomized interventional experiments.
+
+- **Q1 2025:**  
+  - Enhance metaorder reconstruction with uncertainty quantification and sensitivity analysis.  
+  - Integrate additional data sources including real-time market data feeds and alternative asset classes.
+
+- **Q2 2025:**  
+  - Develop real-time interactive dashboards for monitoring key trading metrics and risk exposure.  
+  - Introduce predictive machine learning modules for market behavior analysis.
+
+- **Q3 2025:**  
+  - Expand API capabilities to support advanced query parameters and data aggregation functions.  
+  - Add a comprehensive backtesting framework for systematic strategy simulations and scenario analysis.
+
+- **Q4 2025:**  
+  - Optimize performance and scalability for handling high-frequency tick data.  
+  - Incorporate advanced risk management tools focusing on inventory and market exposure mitigation.
 
 ## Contributing
 
