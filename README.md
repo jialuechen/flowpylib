@@ -1,29 +1,44 @@
 <div align=center>
 
-# FlowPylib: Python Library for Trading Cost and Liquidity Analytics
+# FlowPylib: Python Library for Order Flow Inference and Transaction Cost Analytics
 
 </div>
 
 <div align=center>
 
-[![PyPI - Version](https://img.shields.io/pypi/v/flowpylib)](https://pypi.org/project/flowpylib/)
+[![PyPI - Version](https://img.shields.io/pypi/v/pytca)](https://pypi.org/project/flowpylib/)
 [![Python Versions](https://img.shields.io/badge/python-3.6%2B-green)](https://pypi.org/project/flowpylib/)
 ![PyPI downloads](https://img.shields.io/pypi/dm/flowpylib)
-[![Documentation Status](https://readthedocs.org/projects/flowpylib/badge/?version=latest)](https://flowpylib.readthedocs.io/en/latest/?badge=latest)
+[![Documentation Status](https://readthedocs.org/projects/pytca/badge/?version=latest)](https://flowpylib.readthedocs.io/en/latest/?badge=latest)
 [![License](https://img.shields.io/badge/License-BSD%202--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)
 [![Coverage Status](https://coveralls.io/repos/github/jialuechen/flowpylib/badge.svg?branch=main)](https://coveralls.io/github/jialuechen/flowpylib?branch=main)
 
 </div>
 
-**FlowPylib** is a Python package for transaction cost analysis in financial markets, supporting both stock and forex data at the tick level.
+**FlowPylib** is a Python package for transaction cost analysis in financial markets, supporting both stock and forex data at the tick level. The library assists traders and market makers by enabling detailed analysis of market data, reconstruction of metaorders, and simulation of order flows. It also provides various visualization tools and a RESTful API to integrate the analytics into your systems.
 
 ## Features
 
-- Support tick-level data processing and analytics for stocks and forex
-- Perform various analyses including slippage, market impact, and timing cost and Calculate key metrics such as VWAP and implementation shortfall
-- Generate visualizations and reports
-- Enable RESTful API for integration with other systems
-- Support for Excel and KDB+ as well as well as other RDBMS data sources
+- **Tick Data Processing:**  
+  Process high-frequency tick data for stocks and forex.
+
+- **MetaOrder Reconstruction:**  
+  Reconstruct realistic metaorders using public tick data as ground truth, enabling offline pre-trade cost estimation and execution optimization.
+
+- **Bayesian Change-Point Detection:**  
+  Detect regime shifts in order flow to help market makers adjust quoting skew and manage inventory exposure in real time.
+
+- **Buy-Side Order Flow Simulation:**  
+  Simulate buy-side order flow to estimate the number of trades required to detect directional alpha in client order flow.
+
+- **Rich Visualizations & Reporting:**  
+  Generate interactive charts and dashboards, including candlestick charts, trade flow visualizations, and summary dashboards.
+
+- **RESTful API Integration:**  
+  Run an API server to provide analysis as a service, making it easy to integrate with other systems.
+
+- **Multi-Source Data Loading:**  
+  Supports CSV, Excel, SQL, KDB+, and other RDBMS data sources.
 
 ## Installation
 
