@@ -8,9 +8,7 @@
 
 [![PyPI - Version](https://img.shields.io/pypi/v/pytca)](https://pypi.org/project/flowpylib/)
 [![Python Versions](https://img.shields.io/badge/python-3.6%2B-green)](https://pypi.org/project/flowpylib/)
-[![Documentation Status](https://readthedocs.org/projects/pytca/badge/?version=latest)](https://flowpylib.readthedocs.io/en/latest/?badge=latest)
 [![License](https://img.shields.io/badge/License-BSD%202--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)
-[![Coverage Status](https://coveralls.io/repos/github/jialuechen/flowpylib/badge.svg?branch=main)](https://coveralls.io/github/jialuechen/flowpylib?branch=main)
 
 </div>
 
