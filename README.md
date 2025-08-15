@@ -145,17 +145,6 @@ flowpylib.run_api(host='localhost', port=5000)
 
 ## Roadmap
 
-- **Q4 2024:**  
-  - Implement an order flow simulator capable of generating large-scale alpha-less orders, i.e., unbiased trades from randomized interventional experiments.
-
-- **Q1 2025:**  
-  - Enhance metaorder reconstruction with uncertainty quantification and sensitivity analysis.  
-  - Integrate additional data sources including real-time market data feeds and alternative asset classes.
-
-- **Q2 2025:**  
-  - Develop real-time interactive dashboards for monitoring key trading metrics and risk exposure.  
-  - Introduce predictive machine learning modules for market behavior analysis.
-
 - **Q3 2025:**  
   - Expand API capabilities to support advanced query parameters and data aggregation functions.  
   - Add a comprehensive backtesting framework for systematic strategy simulations and scenario analysis.
